@@ -1,0 +1,2 @@
+gnuplotlib==0.41
+numpy==1.26.3

@@ -43,36 +43,36 @@ perf_test(
 ### `perf_test` function
 
 ```python
-def perf_test(funcs: list, begin=1, bound=10000, step=100, callbacks=[])
+def perf_test(funcs: list, begin=1, bound=10000, step=100, callbacks=[]):
 ```
 
-> Run a list of functions with a range of inputs, time them, and plot their
-> performance.
-> 
-> #### _`list`_**`funcs`**
-> 
-> > A list of tester functions that:
-> >
-> > - Each take an int, and
-> > - Do some comparable operations that scale accordingly
-> >
-> > e.g `[labmda x: [i for i in range(x)], lamba y: (i for i in range(x))]`
-> 
-> #### _`int`_**`begin`**
-> 
-> > The lower bound of the test, defaults to `1`
-> 
-> #### _`int`_**`bound`**
-> 
-> > The upper bound of the test, defaults to `10000`
-> 
-> #### _`int`_**`step`**
-> 
-> > How much to increment for each iteration, defaults to `100`
-> 
-> #### _`list`_**`callbacks`**
-> 
-> > A list of callbacks to run before testing each function, defaults to `[]`
+Run a list of functions with a range of inputs, time them, and plot their
+performance.
+
+#### _`list`_**`funcs`**
+
+> A list of tester functions that:
+>
+> - Each take an int, and
+> - Do some comparable operations that scale accordingly
+>
+> e.g `[labmda x: [i for i in range(x)], lamba y: (i for i in range(x))]`
+
+#### _`int`_**`begin`**
+
+> The lower bound of the test, defaults to `1`
+
+#### _`int`_**`bound`**
+
+> The upper bound of the test, defaults to `10000`
+
+#### _`int`_**`step`**
+
+> How much to increment for each iteration, defaults to `100`
+
+#### _`list`_**`callbacks`**
+
+> A list of callbacks to run before testing each function, defaults to `[]`
 
 ### `@timeit` decorator
 

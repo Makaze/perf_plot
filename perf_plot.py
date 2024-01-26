@@ -31,7 +31,7 @@ def perf_test(funcs: list, begin=1, bound=10000, step=100, callbacks=[]):
 
     :param list funcs: A list of tester functions that each take an int and do
     some comparable operations that scale accordingly
-    e.g [labmda x: [i for i in range(x)], lamba y: (i for i in range(x))]
+    e.g [labmda x: [i for i in range(x)], lamba y: (i for i in range(y))]
     :param int begin: The lower bound of the test, defaults to 1
     :param int bound: The upper bound of the test, defaults to 10000
     :param int step: How much to increment for each iteration, defaults to 100

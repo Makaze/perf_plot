@@ -56,7 +56,7 @@ performance.
 > - Each take an int, and
 > - Do some comparable operations that scale accordingly
 >
-> e.g `[labmda x: [i for i in range(x)], lamba y: (i for i in range(x))]`
+> e.g `[labmda x: [i for i in range(x)], lamba y: (i for i in range(y))]`
 
 #### _`int`_**`begin`**
 

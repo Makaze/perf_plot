@@ -8,6 +8,9 @@ A Python performance measuring and visualization tool using gplotlib.
 
 ```python
 from perf_plot import timeit, perf_test
+import sys
+
+sys.dont_write_bytecode = 1  # Include this to prevent pycache
 
 d = dict()
 
@@ -49,7 +52,7 @@ def perf_test(funcs: list, begin=1, bound=10000, step=100, callbacks=[]):
 Run a list of functions with a range of inputs, time them, and plot their
 performance.
 
-#### _`list`_**`funcs`**
+#### _`list`_ **`funcs`**
 
 > A list of tester functions that:
 >
@@ -58,19 +61,19 @@ performance.
 >
 > e.g `[labmda x: [i for i in range(x)], lamba y: (i for i in range(y))]`
 
-#### _`int`_**`begin`**
+#### _`int`_ **`begin`**
 
 > The lower bound of the test, defaults to `1`
 
-#### _`int`_**`bound`**
+#### _`int`_ **`bound`**
 
 > The upper bound of the test, defaults to `10000`
 
-#### _`int`_**`step`**
+#### _`int`_ **`step`**
 
 > How much to increment for each iteration, defaults to `100`
 
-#### _`list`_**`callbacks`**
+#### _`list`_ **`callbacks`**
 
 > A list of callbacks to run before testing each function, defaults to `[]`
 

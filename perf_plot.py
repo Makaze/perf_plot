@@ -3,6 +3,10 @@ import numpy as np
 import gnuplotlib as gp
 import time
 
+import sys
+
+sys.dont_write_bytecode = 1  # Include this all test files to aviod pycache
+
 timers = dict()
 
 

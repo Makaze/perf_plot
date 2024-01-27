@@ -1,6 +1,6 @@
 # perf_plot
 
-A Python performance measuring and visualization tool using gplotlib.
+A Python performance measuring and visualization tool using gnuplotlib.
 
 ## Example Usage:
 
@@ -40,6 +40,10 @@ perf_test(
     callbacks=[make_dict],
 )
 ```
+
+## Prerequisites
+
+This tool relies on [`gnuplotlib`](https://github.com/dkogan/gnuplotlib)
 
 ## API
 

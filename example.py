@@ -1,7 +1,7 @@
 from perf_plot import timeit, perf_test
 import sys
 
-sys.dont_write_bytecode = 1
+sys.dont_write_bytecode = 1  # Include this all test files to aviod pycache
 
 d = dict()
 

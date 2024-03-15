@@ -1,7 +1,7 @@
 from functools import wraps
-import numpy as np
-import gnuplotlib as gp
-import time
+from numpy import arange, array
+from gnuplotlib import plot
+from time import perf_counter
 
 import sys
 
@@ -15,11 +15,11 @@ def timeit(func):
 
     @wraps(func)
     def timeit_wrapper(*args, **kwargs):
-        start_time = time.perf_counter()
+        start_time = perf_counter()
         if func.__name__ not in timers:
             timers[func.__name__] = []
         result = func(*args, **kwargs)
-        end_time = time.perf_counter()
+        end_time = perf_counter()
         total_time = end_time - start_time
         timers[func.__name__].append(total_time)
         # first item in the args, ie `args[0]` is `self`
@@ -46,11 +46,11 @@ def perf_test(funcs: list, begin=1, bound=10000, step=100, callbacks=[]):
         for i in range(begin, bound + 1, step):
             [c(i) for c in callbacks]
             f(i)
-    gp.plot(
+    plot(
         *[
             (
-                np.arange(begin, bound + 1, step),
-                np.array(timers[f.__name__]),
+                arange(begin, bound + 1, step),
+                array(timers[f.__name__]),
                 {"legend": f.__name__.replace("_", r"\\\_")},
             )
             for f in funcs

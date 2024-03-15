@@ -4,7 +4,7 @@ A Python performance measuring and visualization tool using gnuplot.
 
 ## Example Usage:
 
-![Plot measuring two ways to unpack a dictionary](https://media.discordapp.net/attachments/566419626758504452/1196988560990011483/image.png?ex=65c2dbf7&is=65b066f7&hm=ff36728ddb780172fb0153b34f8321e3bd268a4864923a4328c2404f9dff3a71&=&format=webp&quality=lossless)
+![Plot measuring two ways to unpack a dictionary](demo-1.png) ![Plot measuring two ways to unpack a dictionary](demo-2.png)
 
 ```python
 from perf_plot import timeit, perf_test
